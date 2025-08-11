@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, Calendar, MapPin, Activity } from 'lucide-react';
+import { ArrowLeft, Calendar, Activity } from 'lucide-react';
 import { tours } from '../data/tours';
 
 const ItineraryPage: React.FC = () => {
@@ -32,7 +32,7 @@ const ItineraryPage: React.FC = () => {
 
       {/* Daily Itinerary */}
       <div className="space-y-6">
-        {tour.itinerary.map((day, index) => (
+        {tour.itinerary.map((day) => (
           <div key={day.day} className="bg-white rounded-lg shadow-md overflow-hidden">
             <div className="bg-gray-50 px-6 py-4 border-b">
               <div className="flex items-center">

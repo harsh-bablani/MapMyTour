@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { ArrowLeft, Calendar, Users, CreditCard, Loader2, AlertCircle, CheckCircle } from 'lucide-react';
+import { ArrowLeft, Loader2, AlertCircle, CheckCircle } from 'lucide-react';
 import { useAppDispatch, useAppSelector } from '../store/hooks';
 import { fetchTourById, createBooking } from '../store/slices/toursSlice';
 

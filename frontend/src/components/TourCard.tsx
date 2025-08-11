@@ -20,10 +20,6 @@ const TourCard: React.FC<TourCardProps> = ({ tour }) => {
     dispatch(toggleWishlist(tour.id));
   };
 
-  const getDurationDays = (duration: string) => {
-    const match = duration.match(/(\d+)/);
-    return match ? parseInt(match[1]) : 0;
-  };
 
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
