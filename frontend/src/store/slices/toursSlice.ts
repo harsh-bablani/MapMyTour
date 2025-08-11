@@ -32,7 +32,7 @@ export const fetchTours = createAsyncThunk(
   'tours/fetchTours',
   async (_, { rejectWithValue }) => {
     try {
-      const response = await axios.get('http://localhost:5000/api/tours');
+      const response = await axios.getfetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/tours`);
       // Handle different response structures
       const toursData = response.data.tours || response.data || [];
       return Array.isArray(toursData) ? toursData : [];
@@ -46,7 +46,7 @@ export const fetchTourById = createAsyncThunk(
   'tours/fetchTourById',
   async (id: string, { rejectWithValue }) => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/tours/${id}`);
+      const response = await axios.getfetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/tours`);
       // Handle different response structures
       const tourData = response.data.tour || response.data;
       return tourData || null;
@@ -60,7 +60,7 @@ export const createBooking = createAsyncThunk(
   'tours/createBooking',
   async (bookingData: any, { rejectWithValue }) => {
     try {
-      const response = await axios.post('http://localhost:5000/api/tours/book', bookingData);
+      const response = await axios.post(fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/tours`); bookingData);
       return response.data;
     } catch (error) {
       return rejectWithValue('Failed to create booking');
