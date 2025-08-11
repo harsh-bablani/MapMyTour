@@ -9,7 +9,7 @@ const Header: React.FC = () => {
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center space-x-3">
             <img src={logo} alt="TripBox Logo" className="h-12 w-12 object-contain" />
-            <span className="text-xl font-bold text-gray-900"></span>
+            <span className="text-xl font-bold text-gray-900">TripBox</span>
           </Link>
           <nav className="flex space-x-8">
             <Link to="/" className="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors">
