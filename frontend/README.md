@@ -20,7 +20,7 @@ export default tseslint.config([
       // Other configs
 
       // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
+      ...tseslint.configs.recommendedTypeChecked
       // Alternatively, use this for stricter rules
       ...tseslint.configs.strictTypeChecked,
       // Optionally, add this for stylistic rules
